@@ -1,5 +1,5 @@
 
-// un objeto literal con las acciones para cada ruta
+// creamos un objeto literal con las acciones para cada ruta
 const mainController = {
     home: function(req, res){
         res.render("index");

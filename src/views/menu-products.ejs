@@ -29,24 +29,25 @@
       <h1>Menu del chef:</h1>
   
       <section class="menu-wrap">
-
-            <article>
-              <div class="img-container">
-                <img src="/img/principal.jpg" alt="plato">
-              </div>
-              <p>informacion del plato:</p>
-              <ul>
-                <li>
-                    Nombre:   
-                </li>
-                <li>
-                    Descripcion: 
-                </li>
-                <li>
-                    Precio:  
-                </li>
-              </ul>
-            </article>
+        <% products.forEach(function(product) { %>
+          <article>
+            <div class="img-container">
+              <img src="/img/principal.jpg" alt="plato">
+            </div>
+            <p>informacion del plato:</p>
+            <ul>
+              <li>
+                  Nombre: <%= product.name %> 
+              </li>
+              <li>
+                  Descripcion: <%= product.description %>
+              </li>
+              <li>
+                  Precio:  <%= product.price %>
+              </li>
+            </ul>
+          </article>
+        <% }) %> 
             
       </section>
     </div>
