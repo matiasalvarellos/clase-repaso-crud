@@ -36,24 +36,24 @@
 
         <main>
             <h1 class="title">
-              Actulizar el producto:
+              Actulizar el producto: <%= product.name %>  
             </h1>
             <div class="form-container">
-                <form action="#"  method="">
+                <form action="/products/edit-process/<%= product.id %>?_method=PUT"  method="post">
                   
                   <div class="field-wrap">
                     <label for="name">Nombre de plato:</label>
-                    <input type="text" name="name" id="name">
+                    <input type="text" value="<%= product.name %>" name="name" id="name">
                   </div>
                   
                   <div class="field-wrap">
                     <label for="price">Precio:</label>
-                    <input type="text" name="price" id="price">
+                    <input type="text" value="<%= product.price %>" name="price" id="price">
                   </div>
                   
                   <div class="field-wrap" >
                     <label for="description">Descripcion:</label>
-                    <textarea name="description" class="" id="description"></textarea>
+                    <textarea name="description" id="description"><%= product.description %></textarea>
                   </div>
                   
                   <div class="field-wrap">
@@ -64,7 +64,7 @@
   
                 </form>
 
-                <form action="#" method="">
+                <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
                   <button>Borrar</button>
                 </form>
 
